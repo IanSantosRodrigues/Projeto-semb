@@ -1,0 +1,10 @@
+16:16:03 **** Incremental Build of configuration Debug for project PRJ3_Alimentador_Digital_v2 ****
+make -j8 all 
+arm-none-eabi-size  PRJ3_Alimentador_Digital_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11100	     12	   1732	  12844	   322c	PRJ3_Alimentador_Digital_v2.elf
+Finished building: default.size.stdout
+ 
+
+16:16:04 Build Finished. 0 errors, 0 warnings. (took 572ms)
+

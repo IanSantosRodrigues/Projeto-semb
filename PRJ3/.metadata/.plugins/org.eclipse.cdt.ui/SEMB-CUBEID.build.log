@@ -1,0 +1,16 @@
+15:43:51 **** Build of configuration Debug for project SEMB-CUBEID ****
+make -j8 all 
+arm-none-eabi-gcc -o "SEMB-CUBEID.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\UFU\6 semestre\Sistemas embarcados 1\projeto fernando\PRJ3 - SEMB CubeIDE\SEMB-CUBEID\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SEMB-CUBEID.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SEMB-CUBEID.elf
+ 
+arm-none-eabi-size  SEMB-CUBEID.elf 
+arm-none-eabi-objdump -h -S SEMB-CUBEID.elf  > "SEMB-CUBEID.list"
+   text	   data	    bss	    dec	    hex	filename
+  14812	     12	   1916	  16740	   4164	SEMB-CUBEID.elf
+Finished building: default.size.stdout
+ 
+Finished building: SEMB-CUBEID.list
+ 
+
+15:43:52 Build Finished. 0 errors, 0 warnings. (took 1s.325ms)
+
