@@ -1,0 +1,21 @@
+/*
+ * app.c
+ *
+ *  Created on: Apr 23, 2025
+ *      Author: iansa
+ */
+
+
+#include "app.h"
+
+void app_setup(void)
+{
+
+
+}
+
+void app_loop(void)
+{
+
+
+}

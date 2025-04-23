@@ -2473,3 +2473,18 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-04-23 19:49:13.873
 !MESSAGE Indexed 'Multiparameter_Monitor' (67 sources, 579 headers) in 43.6 sec: 55,845 declarations; 150,985 references; 11 unresolved inclusions; 514 syntax errors; 754 unresolved names (0.36%)
+!SESSION 2025-04-23 20:26:49.946 -----------------------------------------------
+eclipse.buildId=Version 1.18.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-04-23 20:27:19.831
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-04-23 20:27:19.836
+!MESSAGE Log4j2 initialized with config file D:\UFU\6 semestre\Sistemas embarcados 1\Projeto semb\PRJ3\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-04-23 20:27:36.303
+!MESSAGE Started RMI Server, listening on port 41337
