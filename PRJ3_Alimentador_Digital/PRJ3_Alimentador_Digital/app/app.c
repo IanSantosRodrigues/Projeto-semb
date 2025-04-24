@@ -1,8 +1,9 @@
 #include "app.h"
 #include "Display.h"
 #include "main.h"
-#include <stdio.h>
 #include "stm32f4xx.h"
+
+#include <stdio.h>
 
 // --- DEFINIÇÕES DE PINOS ---
 
@@ -81,7 +82,7 @@ static void Motor_Dispense_Disable(void) {
 // --- FUNÇÕES PRINCIPAIS ---
 
 void App_Init(void) {
-    Display_Init();
+    ST7789_Init();
     Display_ShowMenu();
     Motor_Init();
 }

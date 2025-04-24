@@ -1,6 +1,6 @@
-../App/app.c:23:16:HX711_ReadRaw	24	static
-../App/app.c:43:13:Motor_Init	8	static
-../App/app.c:47:6:Motor_Dispense	8	static
-../App/app.c:75:13:Motor_Dispense_Disable	8	static
-../App/app.c:83:6:App_Init	8	static
-../App/app.c:89:6:App_Run	24	static
+../App/app.c:24:16:HX711_ReadRaw	24	static
+../App/app.c:44:13:Motor_Init	8	static
+../App/app.c:48:6:Motor_Dispense	8	static
+../App/app.c:76:13:Motor_Dispense_Disable	8	static
+../App/app.c:84:6:App_Init	8	static
+../App/app.c:90:6:App_Run	24	static
