@@ -1,81 +1,106 @@
-/*
- * app.c
- *
- *  Criado em: 23 de abril de 2025
- *      Autor: iansa
- */
+#include "app.h"
+#include <stdio.h>
 
-#include "app.h"           // Cabeçalho principal do módulo de aplicação
-#include "hardware.h"      // Módulo para controle do hardware
-#include "sensors.h"       // Módulo para gerenciamento de sensores
-#include "logger.h"        // Módulo para registro de eventos
-#include "error_handler.h" // Módulo para tratamento de erros
+// --- DEFINIÇÕES DE PINOS ---
 
-// Funções estáticas para modularizar o código
-static void handle_food_request(void); // Lida com pedidos de comida
-static void handle_error(void);        // Lida com erros detectados
+#define HX711_DATA_Pin         LOAD_DATA_Pin
+#define HX711_DATA_GPIO_Port   LOAD_DATA_GPIO_Port
+#define HX711_CLK_Pin          LOAD_CLK_Pin
+#define HX711_CLK_GPIO_Port    LOAD_CLK_GPIO_Port
 
-/**
- * @brief Configuração inicial do sistema.
- * 
- * Inicializa os módulos de hardware, sensores e logger.
- * Registra um evento indicando que o sistema foi inicializado.
- */
-void app_setup(void)
-{
-    hardware_init(); // Inicializa o hardware do alimentador
-    sensors_init();  // Configura os sensores
-    logger_init();   // Inicializa o sistema de registro de eventos
-    logger_log_event("System initialized"); // Registra a inicialização do sistema
+#define MOTOR_Pin              DC1_IN2_Pin
+#define MOTOR_GPIO_Port        DC1_IN2_GPIO_Port
+
+// --- FUNÇÕES AUXILIARES ---
+
+static void HX711_Init(void) {
+    // GPIOs já configurados no CubeMX (MX_GPIO_Init já inicializa a célula de carga)
 }
 
-/**
- * @brief Loop principal da aplicação.
- * 
- * Executa continuamente verificações de pedidos de comida e erros,
- * além de atualizar o estado do hardware e dos sensores.
- */
-void app_loop(void)
-{
-    if (sensors_detect_food_request()) {
-        handle_food_request(); // Lida com pedidos de comida
+static int32_t HX711_ReadRaw(void) {
+    int32_t data = 0;
+
+    while (HAL_GPIO_ReadPin(HX711_DATA_GPIO_Port, HX711_DATA_Pin)); // Aguarda sinal LOW
+
+    for (int i = 0; i < 24; i++) {
+        HAL_GPIO_WritePin(HX711_CLK_GPIO_Port, HX711_CLK_Pin, GPIO_PIN_SET);
+        data = (data << 1) | HAL_GPIO_ReadPin(HX711_DATA_GPIO_Port, HX711_DATA_Pin);
+        HAL_GPIO_WritePin(HX711_CLK_GPIO_Port, HX711_CLK_Pin, GPIO_PIN_RESET);
     }
 
-    if (sensors_detect_error()) {
-        handle_error(); // Lida com erros detectados
+    // Ganho 128
+    HAL_GPIO_WritePin(HX711_CLK_GPIO_Port, HX711_CLK_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(HX711_CLK_GPIO_Port, HX711_CLK_Pin, GPIO_PIN_RESET);
+
+    if (data & 0x800000) data |= 0xFF000000;
+
+    return data;
+}
+
+static void Motor_Init(void) {
+    HAL_GPIO_WritePin(MOTOR_GPIO_Port, MOTOR_Pin, GPIO_PIN_RESET);
+}
+
+void Motor_Dispense
+(void)
+{
+    // Ativa o motor para abrir a tampa
+    HAL_GPIO_WritePin(DC1_IN1_GPIO_Port, DC1_IN1_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(DC1_IN2_GPIO_Port, DC1_IN2_Pin, GPIO_PIN_RESET);
+
+    HAL_Delay(500); // tempo para abrir a tampa (ajuste conforme necessário)
+
+    // Para o motor para impedir movimento adicional
+    HAL_GPIO_WritePin(DC1_IN1_GPIO_Port, DC1_IN1_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(DC1_IN2_GPIO_Port, DC1_IN2_Pin, GPIO_PIN_RESET);
+
+    // Aguarda um tempo para liberar a ração
+    HAL_Delay(1000); // tempo para ração ser liberada (ajuste conforme necessário)
+
+    // Ativa o motor para fechar a tampa
+    HAL_GPIO_WritePin(DC1_IN1_GPIO_Port, DC1_IN1_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(DC1_IN2_GPIO_Port, DC1_IN2_Pin, GPIO_PIN_SET);
+
+    HAL_Delay(200); // tempo para fechar a tampa (ajuste conforme necessário)
+
+    // Para o motor
+    HAL_GPIO_WritePin(DC1_IN1_GPIO_Port, DC1_IN1_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(DC1_IN2_GPIO_Port, DC1_IN2_Pin, GPIO_PIN_RESET);
+}
+
+
+static void Motor_Dispense_Disable(void) {
+    HAL_GPIO_WritePin(DC1_IN1_GPIO_Port, DC1_IN1_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(DC1_IN2_GPIO_Port, DC1_IN2_Pin, GPIO_PIN_RESET);
+}
+
+static void Display_Init(void) {
+    HAL_Delay(100); // Simula inicialização
+}
+
+static void Display_Print(const char *str) {
+    // Apenas simula o uso do display
+    (void)str;
+}
+
+// --- FUNÇÕES PRINCIPAIS ---
+
+void App_Init(void) {
+    Display_Init();
+    HX711_Init();
+    Motor_Init();
+    Display_Print("Iniciando...");
+}
+
+void App_Run(void) {
+    const int32_t pesoCorte = 50; // Valor fictício de corte em gramas
+    int32_t peso = HX711_ReadRaw();
+
+    while (peso < pesoCorte) {
+        Motor_Dispense();  
+        HAL_Delay(500); // Aguarda um tempo para estabilizar a leitura
+        peso = HX711_ReadRaw();
     }
-
-    hardware_update(); // Atualiza o estado do hardware
-    sensors_update();  // Atualiza o estado dos sensores
+    Motor_Dispense_Disable();
+   
 }
-
-/**
- * @brief Lida com pedidos de comida.
- * 
- * Dispensa comida e registra o evento no sistema de logs.
- */
-static void handle_food_request(void)
-{
-    hardware_dispense_food(); // Dispensa comida
-    logger_log_event("Food dispensed"); // Registra o evento de comida dispensada
-}
-
-/**
- * @brief Lida com erros detectados.
- * 
- * Registra o erro no sistema de logs, sinaliza o erro no hardware
- * e processa o erro utilizando o módulo de tratamento de erros.
- */
-static void handle_error(void)
-{
-    logger_log_event("Error detected"); // Registra o erro
-    hardware_signal_error(); // Sinaliza o erro no hardware
-    error_handler_process(); // Processa o erro usando o módulo de tratamento de erros
-}
-
-// TODO:
-// 1. Implementar funções no módulo `hardware` para controle mais detalhado do hardware.
-// 2. Adicionar mais tipos de sensores no módulo `sensors` e suas respectivas verificações.
-// 3. Expandir o módulo `logger` para suportar diferentes níveis de log (info, warning, error).
-// 4. Melhorar o módulo `error_handler` para incluir estratégias de recuperação de erros.
-// 5. Adicionar testes unitários para validar o comportamento de cada módulo.
