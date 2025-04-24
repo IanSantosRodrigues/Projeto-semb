@@ -1,0 +1,7 @@
+../App/Src/display.c:14:6:ST7789_Init	8	static
+../App/Src/display.c:41:6:ST7789_WriteCommand	16	static
+../App/Src/display.c:49:6:ST7789_WriteData	16	static
+../App/Src/display.c:57:6:Display_Print	16	static
+../App/Src/display.c:62:6:Display_ShowMenu	8	static
+../App/Src/display.c:71:6:Display_ShowMessage	16	static
+../App/Src/display.c:76:6:Display_ShowProgressBar	24	static

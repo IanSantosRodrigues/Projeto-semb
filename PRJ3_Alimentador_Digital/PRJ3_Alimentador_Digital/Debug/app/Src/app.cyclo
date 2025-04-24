@@ -1,0 +1,6 @@
+../App/Src/app.c:24:16:HX711_ReadRaw	4
+../App/Src/app.c:44:13:Motor_Init	1
+../App/Src/app.c:48:6:Motor_Dispense	1
+../App/Src/app.c:76:13:Motor_Dispense_Disable	1
+../App/Src/app.c:84:6:App_Init	1
+../App/Src/app.c:90:6:App_Run	4

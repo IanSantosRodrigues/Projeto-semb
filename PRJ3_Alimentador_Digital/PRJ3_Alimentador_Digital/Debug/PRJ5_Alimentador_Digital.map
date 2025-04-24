@@ -7,11 +7,11 @@ C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.external
 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-fwalk.o)
                               C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o) (_fwalk_sglue)
 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-printf.o)
-                              ./App/display.o (printf)
+                              ./App/Src/display.o (printf)
 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-putchar.o)
-                              ./App/display.o (putchar)
+                              ./App/Src/display.o (putchar)
 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-puts.o)
-                              ./App/display.o (puts)
+                              ./App/Src/display.o (puts)
 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-stdio.o)
                               C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o) (__sread)
 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-wbuf.o)
@@ -93,189 +93,189 @@ Discarded input sections
  .ARM.exidx     0x00000000       0x10 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .ARM.attributes
                 0x00000000       0x20 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .group         0x00000000        0xc ./App/app.o
- .text          0x00000000        0x0 ./App/app.o
- .data          0x00000000        0x0 ./App/app.o
- .bss           0x00000000        0x0 ./App/app.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .group         0x00000000        0xc ./App/display.o
- .text          0x00000000        0x0 ./App/display.o
- .data          0x00000000        0x0 ./App/display.o
- .bss           0x00000000        0x0 ./App/display.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/app.o
+ .text          0x00000000        0x0 ./App/Src/app.o
+ .data          0x00000000        0x0 ./App/Src/app.o
+ .bss           0x00000000        0x0 ./App/Src/app.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .group         0x00000000        0xc ./App/Src/display.o
+ .text          0x00000000        0x0 ./App/Src/display.o
+ .data          0x00000000        0x0 ./App/Src/display.o
+ .bss           0x00000000        0x0 ./App/Src/display.o
  .text.Display_Print
-                0x00000000       0x16 ./App/display.o
- .debug_macro   0x00000000      0xad8 ./App/display.o
- .debug_macro   0x00000000      0x29b ./App/display.o
- .debug_macro   0x00000000       0x2e ./App/display.o
- .debug_macro   0x00000000       0x28 ./App/display.o
- .debug_macro   0x00000000       0x22 ./App/display.o
- .debug_macro   0x00000000       0x8e ./App/display.o
- .debug_macro   0x00000000       0x51 ./App/display.o
- .debug_macro   0x00000000      0x103 ./App/display.o
- .debug_macro   0x00000000       0x6a ./App/display.o
- .debug_macro   0x00000000      0x1df ./App/display.o
- .debug_macro   0x00000000       0x1c ./App/display.o
- .debug_macro   0x00000000       0x22 ./App/display.o
- .debug_macro   0x00000000       0xfb ./App/display.o
- .debug_macro   0x00000000     0x1011 ./App/display.o
- .debug_macro   0x00000000      0x11f ./App/display.o
- .debug_macro   0x00000000    0x16749 ./App/display.o
- .debug_macro   0x00000000       0x6d ./App/display.o
- .debug_macro   0x00000000     0x369a ./App/display.o
- .debug_macro   0x00000000      0x190 ./App/display.o
- .debug_macro   0x00000000       0x5c ./App/display.o
- .debug_macro   0x00000000      0xca5 ./App/display.o
- .debug_macro   0x00000000      0x9e9 ./App/display.o
- .debug_macro   0x00000000      0x115 ./App/display.o
- .debug_macro   0x00000000      0x1a0 ./App/display.o
- .debug_macro   0x00000000       0xa5 ./App/display.o
- .debug_macro   0x00000000      0x16d ./App/display.o
- .debug_macro   0x00000000      0x287 ./App/display.o
- .debug_macro   0x00000000       0x5f ./App/display.o
- .debug_macro   0x00000000      0x236 ./App/display.o
- .debug_macro   0x00000000      0x132 ./App/display.o
- .debug_macro   0x00000000      0x29c ./App/display.o
- .debug_macro   0x00000000       0x2e ./App/display.o
- .debug_macro   0x00000000      0x127 ./App/display.o
- .debug_macro   0x00000000       0xe8 ./App/display.o
- .debug_macro   0x00000000       0x89 ./App/display.o
- .debug_macro   0x00000000      0x225 ./App/display.o
- .debug_macro   0x00000000      0x8ed ./App/display.o
- .debug_macro   0x00000000       0x53 ./App/display.o
- .debug_macro   0x00000000      0x126 ./App/display.o
- .debug_macro   0x00000000       0x61 ./App/display.o
- .debug_macro   0x00000000       0x2a ./App/display.o
- .debug_macro   0x00000000       0x43 ./App/display.o
- .debug_macro   0x00000000       0x34 ./App/display.o
- .debug_macro   0x00000000       0x16 ./App/display.o
- .debug_macro   0x00000000       0x3c ./App/display.o
- .debug_macro   0x00000000      0x370 ./App/display.o
- .debug_macro   0x00000000       0x10 ./App/display.o
- .debug_macro   0x00000000       0x16 ./App/display.o
- .debug_macro   0x00000000       0x4a ./App/display.o
- .debug_macro   0x00000000       0x34 ./App/display.o
- .debug_macro   0x00000000       0x10 ./App/display.o
- .debug_macro   0x00000000       0x58 ./App/display.o
- .debug_macro   0x00000000       0x8e ./App/display.o
- .debug_macro   0x00000000       0x1c ./App/display.o
- .debug_macro   0x00000000      0x185 ./App/display.o
- .debug_macro   0x00000000       0x16 ./App/display.o
- .debug_macro   0x00000000       0x16 ./App/display.o
- .debug_macro   0x00000000      0x146 ./App/display.o
+                0x00000000       0x16 ./App/Src/display.o
+ .debug_macro   0x00000000      0xad8 ./App/Src/display.o
+ .debug_macro   0x00000000      0x29b ./App/Src/display.o
+ .debug_macro   0x00000000       0x2e ./App/Src/display.o
+ .debug_macro   0x00000000       0x28 ./App/Src/display.o
+ .debug_macro   0x00000000       0x22 ./App/Src/display.o
+ .debug_macro   0x00000000       0x8e ./App/Src/display.o
+ .debug_macro   0x00000000       0x51 ./App/Src/display.o
+ .debug_macro   0x00000000      0x103 ./App/Src/display.o
+ .debug_macro   0x00000000       0x6a ./App/Src/display.o
+ .debug_macro   0x00000000      0x1df ./App/Src/display.o
+ .debug_macro   0x00000000       0x1c ./App/Src/display.o
+ .debug_macro   0x00000000       0x22 ./App/Src/display.o
+ .debug_macro   0x00000000       0xfb ./App/Src/display.o
+ .debug_macro   0x00000000     0x1011 ./App/Src/display.o
+ .debug_macro   0x00000000      0x11f ./App/Src/display.o
+ .debug_macro   0x00000000    0x16749 ./App/Src/display.o
+ .debug_macro   0x00000000       0x6d ./App/Src/display.o
+ .debug_macro   0x00000000     0x369a ./App/Src/display.o
+ .debug_macro   0x00000000      0x190 ./App/Src/display.o
+ .debug_macro   0x00000000       0x5c ./App/Src/display.o
+ .debug_macro   0x00000000      0xca5 ./App/Src/display.o
+ .debug_macro   0x00000000      0x9e9 ./App/Src/display.o
+ .debug_macro   0x00000000      0x115 ./App/Src/display.o
+ .debug_macro   0x00000000      0x1a0 ./App/Src/display.o
+ .debug_macro   0x00000000       0xa5 ./App/Src/display.o
+ .debug_macro   0x00000000      0x16d ./App/Src/display.o
+ .debug_macro   0x00000000      0x287 ./App/Src/display.o
+ .debug_macro   0x00000000       0x5f ./App/Src/display.o
+ .debug_macro   0x00000000      0x236 ./App/Src/display.o
+ .debug_macro   0x00000000      0x132 ./App/Src/display.o
+ .debug_macro   0x00000000      0x29c ./App/Src/display.o
+ .debug_macro   0x00000000       0x2e ./App/Src/display.o
+ .debug_macro   0x00000000      0x127 ./App/Src/display.o
+ .debug_macro   0x00000000       0xe8 ./App/Src/display.o
+ .debug_macro   0x00000000       0x89 ./App/Src/display.o
+ .debug_macro   0x00000000      0x225 ./App/Src/display.o
+ .debug_macro   0x00000000      0x8ed ./App/Src/display.o
+ .debug_macro   0x00000000       0x53 ./App/Src/display.o
+ .debug_macro   0x00000000      0x126 ./App/Src/display.o
+ .debug_macro   0x00000000       0x61 ./App/Src/display.o
+ .debug_macro   0x00000000       0x2a ./App/Src/display.o
+ .debug_macro   0x00000000       0x43 ./App/Src/display.o
+ .debug_macro   0x00000000       0x34 ./App/Src/display.o
+ .debug_macro   0x00000000       0x16 ./App/Src/display.o
+ .debug_macro   0x00000000       0x3c ./App/Src/display.o
+ .debug_macro   0x00000000      0x370 ./App/Src/display.o
+ .debug_macro   0x00000000       0x10 ./App/Src/display.o
+ .debug_macro   0x00000000       0x16 ./App/Src/display.o
+ .debug_macro   0x00000000       0x4a ./App/Src/display.o
+ .debug_macro   0x00000000       0x34 ./App/Src/display.o
+ .debug_macro   0x00000000       0x10 ./App/Src/display.o
+ .debug_macro   0x00000000       0x58 ./App/Src/display.o
+ .debug_macro   0x00000000       0x8e ./App/Src/display.o
+ .debug_macro   0x00000000       0x1c ./App/Src/display.o
+ .debug_macro   0x00000000      0x185 ./App/Src/display.o
+ .debug_macro   0x00000000       0x16 ./App/Src/display.o
+ .debug_macro   0x00000000       0x16 ./App/Src/display.o
+ .debug_macro   0x00000000      0x146 ./App/Src/display.o
  .group         0x00000000        0xc ./Core/Src/main.o
  .group         0x00000000        0xc ./Core/Src/main.o
  .group         0x00000000        0xc ./Core/Src/main.o
@@ -3101,8 +3101,8 @@ Linker script and memory map
 LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
 LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
-LOAD ./App/app.o
-LOAD ./App/display.o
+LOAD ./App/Src/app.o
+LOAD ./App/Src/display.o
 LOAD ./Core/Src/main.o
 LOAD ./Core/Src/stm32f4xx_hal_msp.o
 LOAD ./Core/Src/stm32f4xx_it.o
@@ -3172,36 +3172,36 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x080005d8                __aeabi_ldiv0
  *(.text*)
  .text.HX711_ReadRaw
-                0x080005dc       0x88 ./App/app.o
+                0x080005dc       0x88 ./App/Src/app.o
  .text.Motor_Init
-                0x08000664       0x18 ./App/app.o
+                0x08000664       0x18 ./App/Src/app.o
  .text.Motor_Dispense
-                0x0800067c       0x88 ./App/app.o
+                0x0800067c       0x88 ./App/Src/app.o
                 0x0800067c                Motor_Dispense
  .text.Motor_Dispense_Disable
-                0x08000704       0x28 ./App/app.o
+                0x08000704       0x28 ./App/Src/app.o
  .text.App_Init
-                0x0800072c       0x14 ./App/app.o
+                0x0800072c       0x14 ./App/Src/app.o
                 0x0800072c                App_Init
- .text.App_Run  0x08000740       0xb4 ./App/app.o
+ .text.App_Run  0x08000740       0xb4 ./App/Src/app.o
                 0x08000740                App_Run
  .text.ST7789_Init
-                0x080007f4       0x68 ./App/display.o
+                0x080007f4       0x68 ./App/Src/display.o
                 0x080007f4                ST7789_Init
  .text.ST7789_WriteCommand
-                0x0800085c       0x4c ./App/display.o
+                0x0800085c       0x4c ./App/Src/display.o
                 0x0800085c                ST7789_WriteCommand
  .text.ST7789_WriteData
-                0x080008a8       0x4c ./App/display.o
+                0x080008a8       0x4c ./App/Src/display.o
                 0x080008a8                ST7789_WriteData
  .text.Display_ShowMenu
-                0x080008f4       0x3c ./App/display.o
+                0x080008f4       0x3c ./App/Src/display.o
                 0x080008f4                Display_ShowMenu
  .text.Display_ShowMessage
-                0x08000930       0x24 ./App/display.o
+                0x08000930       0x24 ./App/Src/display.o
                 0x08000930                Display_ShowMessage
  .text.Display_ShowProgressBar
-                0x08000954       0x74 ./App/display.o
+                0x08000954       0x74 ./App/Src/display.o
                 0x08000954                Display_ShowProgressBar
  .text.main     0x080009c8       0x22 ./Core/Src/main.o
                 0x080009c8                main
@@ -3638,9 +3638,9 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 .rodata         0x08003e88      0x130
                 0x08003e88                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08003e88       0x51 ./App/app.o
+ .rodata        0x08003e88       0x51 ./App/Src/app.o
  *fill*         0x08003ed9        0x3 
- .rodata        0x08003edc       0x95 ./App/display.o
+ .rodata        0x08003edc       0x95 ./App/Src/display.o
  *(.rodata*)
  *fill*         0x08003f71        0x3 
  .rodata.AHBPrescTable
@@ -3793,9 +3793,9 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .ARM.attributes
                 0x00000022       0x34 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .ARM.attributes
-                0x00000056       0x34 ./App/app.o
+                0x00000056       0x34 ./App/Src/app.o
  .ARM.attributes
-                0x0000008a       0x34 ./App/display.o
+                0x0000008a       0x34 ./App/Src/display.o
  .ARM.attributes
                 0x000000be       0x34 ./Core/Src/main.o
  .ARM.attributes
@@ -3901,8 +3901,8 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
 .debug_info     0x00000000     0xc42f
- .debug_info    0x00000000      0x309 ./App/app.o
- .debug_info    0x00000309      0x841 ./App/display.o
+ .debug_info    0x00000000      0x309 ./App/Src/app.o
+ .debug_info    0x00000309      0x841 ./App/Src/display.o
  .debug_info    0x00000b4a     0x109f ./Core/Src/main.o
  .debug_info    0x00001be9      0xfb3 ./Core/Src/stm32f4xx_hal_msp.o
  .debug_info    0x00002b9c      0x6e1 ./Core/Src/stm32f4xx_it.o
@@ -3920,8 +3920,8 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_info    0x0000af54     0x14db ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
 
 .debug_abbrev   0x00000000     0x208f
- .debug_abbrev  0x00000000      0x1b7 ./App/app.o
- .debug_abbrev  0x000001b7      0x20a ./App/display.o
+ .debug_abbrev  0x00000000      0x1b7 ./App/Src/app.o
+ .debug_abbrev  0x000001b7      0x20a ./App/Src/display.o
  .debug_abbrev  0x000003c1      0x272 ./Core/Src/main.o
  .debug_abbrev  0x00000633      0x1df ./Core/Src/stm32f4xx_hal_msp.o
  .debug_abbrev  0x00000812      0x192 ./Core/Src/stm32f4xx_it.o
@@ -3940,9 +3940,9 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 
 .debug_aranges  0x00000000      0xd20
  .debug_aranges
-                0x00000000       0x48 ./App/app.o
+                0x00000000       0x48 ./App/Src/app.o
  .debug_aranges
-                0x00000048       0x50 ./App/display.o
+                0x00000048       0x50 ./App/Src/display.o
  .debug_aranges
                 0x00000098       0x48 ./Core/Src/main.o
  .debug_aranges
@@ -3977,9 +3977,9 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 .debug_rnglists
                 0x00000000      0xa13
  .debug_rnglists
-                0x00000000       0x34 ./App/app.o
+                0x00000000       0x34 ./App/Src/app.o
  .debug_rnglists
-                0x00000034       0x37 ./App/display.o
+                0x00000034       0x37 ./App/Src/display.o
  .debug_rnglists
                 0x0000006b       0x34 ./Core/Src/main.o
  .debug_rnglists
@@ -4012,67 +4012,67 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x000008ee      0x125 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
 
 .debug_macro    0x00000000    0x22f44
- .debug_macro   0x00000000      0x2f3 ./App/app.o
- .debug_macro   0x000002f3      0xad8 ./App/app.o
- .debug_macro   0x00000dcb      0x29b ./App/app.o
- .debug_macro   0x00001066       0x2e ./App/app.o
- .debug_macro   0x00001094       0x28 ./App/app.o
- .debug_macro   0x000010bc       0x22 ./App/app.o
- .debug_macro   0x000010de       0x8e ./App/app.o
- .debug_macro   0x0000116c       0x51 ./App/app.o
- .debug_macro   0x000011bd      0x103 ./App/app.o
- .debug_macro   0x000012c0       0x6a ./App/app.o
- .debug_macro   0x0000132a      0x1df ./App/app.o
- .debug_macro   0x00001509       0x1c ./App/app.o
- .debug_macro   0x00001525       0x22 ./App/app.o
- .debug_macro   0x00001547       0xfb ./App/app.o
- .debug_macro   0x00001642     0x1011 ./App/app.o
- .debug_macro   0x00002653      0x11f ./App/app.o
- .debug_macro   0x00002772    0x16749 ./App/app.o
- .debug_macro   0x00018ebb       0x6d ./App/app.o
- .debug_macro   0x00018f28     0x369a ./App/app.o
- .debug_macro   0x0001c5c2      0x190 ./App/app.o
- .debug_macro   0x0001c752       0x5c ./App/app.o
- .debug_macro   0x0001c7ae      0xca5 ./App/app.o
- .debug_macro   0x0001d453      0x9e9 ./App/app.o
- .debug_macro   0x0001de3c      0x115 ./App/app.o
- .debug_macro   0x0001df51      0x1a0 ./App/app.o
- .debug_macro   0x0001e0f1       0xa5 ./App/app.o
- .debug_macro   0x0001e196      0x16d ./App/app.o
- .debug_macro   0x0001e303      0x287 ./App/app.o
- .debug_macro   0x0001e58a       0x5f ./App/app.o
- .debug_macro   0x0001e5e9      0x236 ./App/app.o
- .debug_macro   0x0001e81f      0x132 ./App/app.o
- .debug_macro   0x0001e951      0x29c ./App/app.o
- .debug_macro   0x0001ebed       0x2e ./App/app.o
- .debug_macro   0x0001ec1b      0x127 ./App/app.o
- .debug_macro   0x0001ed42       0xe8 ./App/app.o
- .debug_macro   0x0001ee2a       0x89 ./App/app.o
- .debug_macro   0x0001eeb3      0x225 ./App/app.o
- .debug_macro   0x0001f0d8      0x8ed ./App/app.o
- .debug_macro   0x0001f9c5       0x53 ./App/app.o
- .debug_macro   0x0001fa18      0x126 ./App/app.o
- .debug_macro   0x0001fb3e       0xa6 ./App/app.o
- .debug_macro   0x0001fbe4       0x61 ./App/app.o
- .debug_macro   0x0001fc45       0x2a ./App/app.o
- .debug_macro   0x0001fc6f       0x43 ./App/app.o
- .debug_macro   0x0001fcb2       0x34 ./App/app.o
- .debug_macro   0x0001fce6       0x16 ./App/app.o
- .debug_macro   0x0001fcfc       0x3c ./App/app.o
- .debug_macro   0x0001fd38      0x370 ./App/app.o
- .debug_macro   0x000200a8       0x10 ./App/app.o
- .debug_macro   0x000200b8       0x16 ./App/app.o
- .debug_macro   0x000200ce       0x4a ./App/app.o
- .debug_macro   0x00020118       0x34 ./App/app.o
- .debug_macro   0x0002014c       0x10 ./App/app.o
- .debug_macro   0x0002015c       0x58 ./App/app.o
- .debug_macro   0x000201b4       0x8e ./App/app.o
- .debug_macro   0x00020242       0x1c ./App/app.o
- .debug_macro   0x0002025e      0x185 ./App/app.o
- .debug_macro   0x000203e3       0x16 ./App/app.o
- .debug_macro   0x000203f9       0x16 ./App/app.o
- .debug_macro   0x0002040f      0x146 ./App/app.o
- .debug_macro   0x00020555      0x2c8 ./App/display.o
+ .debug_macro   0x00000000      0x2f3 ./App/Src/app.o
+ .debug_macro   0x000002f3      0xad8 ./App/Src/app.o
+ .debug_macro   0x00000dcb      0x29b ./App/Src/app.o
+ .debug_macro   0x00001066       0x2e ./App/Src/app.o
+ .debug_macro   0x00001094       0x28 ./App/Src/app.o
+ .debug_macro   0x000010bc       0x22 ./App/Src/app.o
+ .debug_macro   0x000010de       0x8e ./App/Src/app.o
+ .debug_macro   0x0000116c       0x51 ./App/Src/app.o
+ .debug_macro   0x000011bd      0x103 ./App/Src/app.o
+ .debug_macro   0x000012c0       0x6a ./App/Src/app.o
+ .debug_macro   0x0000132a      0x1df ./App/Src/app.o
+ .debug_macro   0x00001509       0x1c ./App/Src/app.o
+ .debug_macro   0x00001525       0x22 ./App/Src/app.o
+ .debug_macro   0x00001547       0xfb ./App/Src/app.o
+ .debug_macro   0x00001642     0x1011 ./App/Src/app.o
+ .debug_macro   0x00002653      0x11f ./App/Src/app.o
+ .debug_macro   0x00002772    0x16749 ./App/Src/app.o
+ .debug_macro   0x00018ebb       0x6d ./App/Src/app.o
+ .debug_macro   0x00018f28     0x369a ./App/Src/app.o
+ .debug_macro   0x0001c5c2      0x190 ./App/Src/app.o
+ .debug_macro   0x0001c752       0x5c ./App/Src/app.o
+ .debug_macro   0x0001c7ae      0xca5 ./App/Src/app.o
+ .debug_macro   0x0001d453      0x9e9 ./App/Src/app.o
+ .debug_macro   0x0001de3c      0x115 ./App/Src/app.o
+ .debug_macro   0x0001df51      0x1a0 ./App/Src/app.o
+ .debug_macro   0x0001e0f1       0xa5 ./App/Src/app.o
+ .debug_macro   0x0001e196      0x16d ./App/Src/app.o
+ .debug_macro   0x0001e303      0x287 ./App/Src/app.o
+ .debug_macro   0x0001e58a       0x5f ./App/Src/app.o
+ .debug_macro   0x0001e5e9      0x236 ./App/Src/app.o
+ .debug_macro   0x0001e81f      0x132 ./App/Src/app.o
+ .debug_macro   0x0001e951      0x29c ./App/Src/app.o
+ .debug_macro   0x0001ebed       0x2e ./App/Src/app.o
+ .debug_macro   0x0001ec1b      0x127 ./App/Src/app.o
+ .debug_macro   0x0001ed42       0xe8 ./App/Src/app.o
+ .debug_macro   0x0001ee2a       0x89 ./App/Src/app.o
+ .debug_macro   0x0001eeb3      0x225 ./App/Src/app.o
+ .debug_macro   0x0001f0d8      0x8ed ./App/Src/app.o
+ .debug_macro   0x0001f9c5       0x53 ./App/Src/app.o
+ .debug_macro   0x0001fa18      0x126 ./App/Src/app.o
+ .debug_macro   0x0001fb3e       0xa6 ./App/Src/app.o
+ .debug_macro   0x0001fbe4       0x61 ./App/Src/app.o
+ .debug_macro   0x0001fc45       0x2a ./App/Src/app.o
+ .debug_macro   0x0001fc6f       0x43 ./App/Src/app.o
+ .debug_macro   0x0001fcb2       0x34 ./App/Src/app.o
+ .debug_macro   0x0001fce6       0x16 ./App/Src/app.o
+ .debug_macro   0x0001fcfc       0x3c ./App/Src/app.o
+ .debug_macro   0x0001fd38      0x370 ./App/Src/app.o
+ .debug_macro   0x000200a8       0x10 ./App/Src/app.o
+ .debug_macro   0x000200b8       0x16 ./App/Src/app.o
+ .debug_macro   0x000200ce       0x4a ./App/Src/app.o
+ .debug_macro   0x00020118       0x34 ./App/Src/app.o
+ .debug_macro   0x0002014c       0x10 ./App/Src/app.o
+ .debug_macro   0x0002015c       0x58 ./App/Src/app.o
+ .debug_macro   0x000201b4       0x8e ./App/Src/app.o
+ .debug_macro   0x00020242       0x1c ./App/Src/app.o
+ .debug_macro   0x0002025e      0x185 ./App/Src/app.o
+ .debug_macro   0x000203e3       0x16 ./App/Src/app.o
+ .debug_macro   0x000203f9       0x16 ./App/Src/app.o
+ .debug_macro   0x0002040f      0x146 ./App/Src/app.o
+ .debug_macro   0x00020555      0x2c8 ./App/Src/display.o
  .debug_macro   0x0002081d      0x1e7 ./Core/Src/main.o
  .debug_macro   0x00020a04       0xa0 ./Core/Src/main.o
  .debug_macro   0x00020aa4      0x1dd ./Core/Src/stm32f4xx_hal_msp.o
@@ -4117,49 +4117,49 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x00022ba7      0x1cf ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
  .debug_macro   0x00022d76      0x1ce ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
 
-.debug_line     0x00000000     0xf672
- .debug_line    0x00000000      0x9a2 ./App/app.o
- .debug_line    0x000009a2      0x95d ./App/display.o
- .debug_line    0x000012ff      0x901 ./Core/Src/main.o
- .debug_line    0x00001c00      0x7ce ./Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x000023ce      0x80c ./Core/Src/stm32f4xx_it.o
- .debug_line    0x00002bda      0x8ac ./Core/Src/syscalls.o
- .debug_line    0x00003486      0x588 ./Core/Src/sysmem.o
- .debug_line    0x00003a0e      0x7ca ./Core/Src/system_stm32f4xx.o
- .debug_line    0x000041d8       0x7a ./Core/Startup/startup_stm32f446retx.o
- .debug_line    0x00004252      0xa37 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x00004c89      0xd07 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x00005990      0xb7b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x0000650b      0xe50 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_line    0x0000735b     0x1500 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
- .debug_line    0x0000885b     0x1ccc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
- .debug_line    0x0000a527     0x37b4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_line    0x0000dcdb     0x1997 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+.debug_line     0x00000000     0xf726
+ .debug_line    0x00000000      0x9fa ./App/Src/app.o
+ .debug_line    0x000009fa      0x9b5 ./App/Src/display.o
+ .debug_line    0x000013af      0x905 ./Core/Src/main.o
+ .debug_line    0x00001cb4      0x7ce ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x00002482      0x80c ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x00002c8e      0x8ac ./Core/Src/syscalls.o
+ .debug_line    0x0000353a      0x588 ./Core/Src/sysmem.o
+ .debug_line    0x00003ac2      0x7ca ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x0000428c       0x7a ./Core/Startup/startup_stm32f446retx.o
+ .debug_line    0x00004306      0xa37 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x00004d3d      0xd07 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x00005a44      0xb7b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x000065bf      0xe50 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_line    0x0000740f     0x1500 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_line    0x0000890f     0x1ccc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_line    0x0000a5db     0x37b4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_line    0x0000dd8f     0x1997 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
 
-.debug_str      0x00000000    0xd2379
- .debug_str     0x00000000    0xd2379 ./App/app.o
-                              0xcc9e0 (size before relaxing)
- .debug_str     0x000d2379    0xccb3b ./App/display.o
- .debug_str     0x000d2379    0xc9bc9 ./Core/Src/main.o
- .debug_str     0x000d2379    0xc9e7b ./Core/Src/stm32f4xx_hal_msp.o
- .debug_str     0x000d2379    0xc95bf ./Core/Src/stm32f4xx_it.o
- .debug_str     0x000d2379     0x99f6 ./Core/Src/syscalls.o
- .debug_str     0x000d2379     0x7794 ./Core/Src/sysmem.o
- .debug_str     0x000d2379    0xc8f51 ./Core/Src/system_stm32f4xx.o
- .debug_str     0x000d2379       0x96 ./Core/Startup/startup_stm32f446retx.o
- .debug_str     0x000d2379    0xc9b16 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_str     0x000d2379    0xc986d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_str     0x000d2379    0xc90cc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_str     0x000d2379    0xc938a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_str     0x000d2379    0xc93bd ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
- .debug_str     0x000d2379    0xc97ea ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
- .debug_str     0x000d2379    0xca2b6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_str     0x000d2379    0xc9ac2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+.debug_str      0x00000000    0xd2381
+ .debug_str     0x00000000    0xd2381 ./App/Src/app.o
+                              0xcc9e4 (size before relaxing)
+ .debug_str     0x000d2381    0xccb3f ./App/Src/display.o
+ .debug_str     0x000d2381    0xc9bc9 ./Core/Src/main.o
+ .debug_str     0x000d2381    0xc9e7b ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_str     0x000d2381    0xc95bf ./Core/Src/stm32f4xx_it.o
+ .debug_str     0x000d2381     0x99f6 ./Core/Src/syscalls.o
+ .debug_str     0x000d2381     0x7794 ./Core/Src/sysmem.o
+ .debug_str     0x000d2381    0xc8f51 ./Core/Src/system_stm32f4xx.o
+ .debug_str     0x000d2381       0x96 ./Core/Startup/startup_stm32f446retx.o
+ .debug_str     0x000d2381    0xc9b16 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_str     0x000d2381    0xc986d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_str     0x000d2381    0xc90cc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_str     0x000d2381    0xc938a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_str     0x000d2381    0xc93bd ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_str     0x000d2381    0xc97ea ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_str     0x000d2381    0xca2b6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_str     0x000d2381    0xc9ac2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
 
 .comment        0x00000000       0x43
- .comment       0x00000000       0x43 ./App/app.o
+ .comment       0x00000000       0x43 ./App/Src/app.o
                                  0x44 (size before relaxing)
- .comment       0x00000043       0x44 ./App/display.o
+ .comment       0x00000043       0x44 ./App/Src/display.o
  .comment       0x00000043       0x44 ./Core/Src/main.o
  .comment       0x00000043       0x44 ./Core/Src/stm32f4xx_hal_msp.o
  .comment       0x00000043       0x44 ./Core/Src/stm32f4xx_it.o
@@ -4176,8 +4176,8 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .comment       0x00000043       0x44 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
 
 .debug_frame    0x00000000     0x3e54
- .debug_frame   0x00000000       0xcc ./App/app.o
- .debug_frame   0x000000cc       0xfc ./App/display.o
+ .debug_frame   0x00000000       0xcc ./App/Src/app.o
+ .debug_frame   0x000000cc       0xfc ./App/Src/display.o
  .debug_frame   0x000001c8       0xcc ./Core/Src/main.o
  .debug_frame   0x00000294       0xc8 ./Core/Src/stm32f4xx_hal_msp.o
  .debug_frame   0x0000035c      0x120 ./Core/Src/stm32f4xx_it.o
