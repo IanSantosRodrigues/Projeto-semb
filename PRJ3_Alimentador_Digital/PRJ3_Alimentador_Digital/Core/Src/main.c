@@ -90,14 +90,14 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  app_setup();
+  App_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  app_loop();
+	  App_Run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

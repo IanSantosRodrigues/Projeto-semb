@@ -1,19 +1,15 @@
-/*
- * app.h
- *
- *  Created on: Apr 23, 2025
- *      Author: iansa
- */
+#ifndef APP_H
+#define APP_H
 
-#ifndef APP_H_
-#define APP_H_
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-void app_setup(void);
+void App_Init(void);
+void App_Run(void);
 
-void app_loop(void);
+#ifdef __cplusplus
+}
+#endif
 
-
-
-#endif /* APP_H_ */
-
-
+#endif /* APP_H */
