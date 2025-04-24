@@ -1,0 +1,5 @@
+../App/display.c:21:6:Display_Init	1
+../App/display.c:27:6:Display_Print	1
+../App/display.c:33:6:Display_ShowMenu	2
+../App/display.c:44:6:Display_ShowMessage	1
+../App/display.c:50:6:Display_ShowProgressBar	4

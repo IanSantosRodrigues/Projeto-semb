@@ -1,5 +1,8 @@
 #include "app.h"
+#include "Display.h"
+#include "main.h"
 #include <stdio.h>
+#include "stm32f4xx.h"
 
 // --- DEFINIÇÕES DE PINOS ---
 
@@ -11,11 +14,11 @@
 #define MOTOR_Pin              DC1_IN2_Pin
 #define MOTOR_GPIO_Port        DC1_IN2_GPIO_Port
 
-// --- FUNÇÕES AUXILIARES ---
+#define PESO_CORTE 50  // Valor fictício de corte em gramas
+#define TEMPO_AJUSTE 500  // Tempo de ajuste entre as leituras
 
-static void HX711_Init(void) {
+// --- FUNÇÕES AUXILIARES ---
     // GPIOs já configurados no CubeMX (MX_GPIO_Init já inicializa a célula de carga)
-}
 
 static int32_t HX711_ReadRaw(void) {
     int32_t data = 0;
@@ -74,33 +77,59 @@ static void Motor_Dispense_Disable(void) {
     HAL_GPIO_WritePin(DC1_IN2_GPIO_Port, DC1_IN2_Pin, GPIO_PIN_RESET);
 }
 
-static void Display_Init(void) {
-    HAL_Delay(100); // Simula inicialização
-}
-
-static void Display_Print(const char *str) {
-    // Apenas simula o uso do display
-    (void)str;
-}
 
 // --- FUNÇÕES PRINCIPAIS ---
 
 void App_Init(void) {
     Display_Init();
-    HX711_Init();
+    Display_ShowMenu();
     Motor_Init();
-    Display_Print("Iniciando...");
 }
 
 void App_Run(void) {
-    const int32_t pesoCorte = 50; // Valor fictício de corte em gramas
-    int32_t peso = HX711_ReadRaw();
+    int32_t peso = HX711_ReadRaw();  // Leitura inicial do peso
+    int32_t pesoAnterior = peso;     // Para verificar variações no peso
+    int32_t pesoDiferenca = 0;
+    uint32_t tempoInicio = HAL_GetTick();  // Marca o tempo de início da operação
 
-    while (peso < pesoCorte) {
-        Motor_Dispense();  
-        HAL_Delay(500); // Aguarda um tempo para estabilizar a leitura
-        peso = HX711_ReadRaw();
+    Display_ShowMessage("Iniciando...", 0);  // Exibe mensagem inicial no display
+
+    // Loop de dispense até atingir o peso de corte
+    while (peso < PESO_CORTE) {
+        Motor_Dispense();  // Ativa o motor para dispensar ração
+        HAL_Delay(TEMPO_AJUSTE);  // Aguarda um tempo para estabilizar a leitura
+
+        peso = HX711_ReadRaw();  // Lê o peso após o dispense
+
+        // Calcula a diferença de peso
+        pesoDiferenca = peso - pesoAnterior;
+
+        // Exibe o peso e o progresso no display
+        Display_ShowMessage("Pesando...", 0);
+        Display_ShowProgressBar(peso, PESO_CORTE);
+
+        // Verifica se a diferença de peso é muito pequena
+        if (pesoDiferenca < 1) {
+            Display_ShowMessage("Peso está estável", 1);  // Feedback se o peso não mudar
+        }
+
+        // Verifica o tempo máximo de dispense, caso queira evitar loops infinitos
+        if (HAL_GetTick() - tempoInicio > 30000) {  // Exemplo de timeout de 30 segundos
+            Display_ShowMessage("Tempo excedido!", 1);  // Exibe erro se o tempo foi excedido
+            Motor_Dispense_Disable();  // Desliga o motor em caso de erro
+            return;  // Sai da função
+        }
+
+        // Atualiza a variável pesoAnterior para a próxima comparação
+        pesoAnterior = peso;
     }
+
+    // Quando atingir o peso de corte, desliga o motor
     Motor_Dispense_Disable();
-   
+
+    // Feedback visual de sucesso
+    Display_ShowMessage("Peso alcançado!", 0);
+
+    // Pode adicionar uma pausa antes de finalizar ou reiniciar
+    HAL_Delay(1000);
 }

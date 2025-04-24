@@ -1,0 +1,5 @@
+../App/display.c:21:6:Display_Init	8	static
+../App/display.c:27:6:Display_Print	16	static
+../App/display.c:33:6:Display_ShowMenu	16	static
+../App/display.c:44:6:Display_ShowMessage	16	static
+../App/display.c:50:6:Display_ShowProgressBar	24	static

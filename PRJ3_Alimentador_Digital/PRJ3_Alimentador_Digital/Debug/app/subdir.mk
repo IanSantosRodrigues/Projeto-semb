@@ -5,23 +5,26 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../app/app.c 
+../App/app.c \
+../App/display.c 
 
 OBJS += \
-./app/app.o 
+./App/app.o \
+./App/display.o 
 
 C_DEPS += \
-./app/app.d 
+./App/app.d \
+./App/display.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-app/%.o app/%.su app/%.cyclo: ../app/%.c app/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/UFU/6 semestre/Sistemas embarcados 1/Projeto semb/PRJ3_Alimentador_Digital/PRJ3_Alimentador_Digital/app" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+App/%.o App/%.su App/%.cyclo: ../App/%.c App/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Code/SEMB/Projeto-semb/PRJ3_Alimentador_Digital/PRJ3_Alimentador_Digital/App" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
-clean: clean-app
+clean: clean-App
 
-clean-app:
-	-$(RM) ./app/app.cyclo ./app/app.d ./app/app.o ./app/app.su
+clean-App:
+	-$(RM) ./App/app.cyclo ./App/app.d ./App/app.o ./App/app.su ./App/display.cyclo ./App/display.d ./App/display.o ./App/display.su
 
-.PHONY: clean-app
+.PHONY: clean-App
 

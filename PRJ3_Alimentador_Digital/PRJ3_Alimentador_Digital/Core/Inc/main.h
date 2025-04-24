@@ -81,18 +81,8 @@ void Error_Handler(void);
 #define SWDIO_GPIO_Port GPIOA
 #define SWCLK_Pin GPIO_PIN_14
 #define SWCLK_GPIO_Port GPIOA
-#define BT4_Pin GPIO_PIN_15
-#define BT4_GPIO_Port GPIOA
-#define BT1_Pin GPIO_PIN_10
-#define BT1_GPIO_Port GPIOC
-#define BT2_Pin GPIO_PIN_11
-#define BT2_GPIO_Port GPIOC
-#define BT3_Pin GPIO_PIN_12
-#define BT3_GPIO_Port GPIOC
-#define MOSI_DSP_Pin GPIO_PIN_3
+#define MOSI_DSP_Pin GPIO_PIN_5
 #define MOSI_DSP_GPIO_Port GPIOB
-#define CLK_DSP_Pin GPIO_PIN_5
-#define CLK_DSP_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
