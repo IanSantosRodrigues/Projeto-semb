@@ -1,0 +1,6 @@
+../App/Src/app.c:24:16:HX711_ReadRaw	24	static
+../App/Src/app.c:44:13:Motor_Init	8	static
+../App/Src/app.c:48:6:Motor_Dispense	8	static
+../App/Src/app.c:76:13:Motor_Dispense_Disable	8	static
+../App/Src/app.c:84:6:App_Init	8	static
+../App/Src/app.c:90:6:App_Run	24	static
