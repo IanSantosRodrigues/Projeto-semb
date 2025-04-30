@@ -7631,7 +7631,7 @@
 		)
 		(uuid "fc8dfa10-b12e-46a8-b196-e66e6c48b9b8")
 	)
-	(label "RES_DSP"
+	(label "RESET_DSP"
 		(at 139.7 50.8 0)
 		(fields_autoplaced yes)
 		(effects
@@ -7729,17 +7729,6 @@
 			(justify left bottom)
 		)
 		(uuid "461ee84c-5cbd-4bd5-89fc-9533c656c660")
-	)
-	(label "MOSI_DSP"
-		(at 168.91 34.29 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "47b4d94f-77f4-4b3f-8816-20d3b8879913")
 	)
 	(label "LOAD_OUT"
 		(at 101.6 66.04 180)
@@ -7840,17 +7829,6 @@
 		)
 		(uuid "7d564281-1e68-46a7-b257-4567681a9770")
 	)
-	(label "CLK__DSP"
-		(at 168.91 31.75 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "89089e54-ee0f-404a-8c26-580ddd5f7409")
-	)
 	(label "DC1_IN2"
 		(at 34.29 176.53 180)
 		(fields_autoplaced yes)
@@ -7872,6 +7850,17 @@
 			(justify left bottom)
 		)
 		(uuid "91d53d64-58d4-4cbc-9d82-50b205509fe3")
+	)
+	(label "SDA_DSP"
+		(at 168.91 34.29 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "94ea3c92-bd0c-452e-8100-21c658cafecc")
 	)
 	(label "VDDA"
 		(at 217.17 27.94 90)
@@ -7906,7 +7895,7 @@
 		)
 		(uuid "a12d98c5-56d7-4141-a054-8485fa0a8bf5")
 	)
-	(label "MOSI_DSP"
+	(label "SDA_DSP"
 		(at 139.7 96.52 0)
 		(fields_autoplaced yes)
 		(effects
@@ -7972,7 +7961,7 @@
 		)
 		(uuid "c3da046f-f438-46dc-bfde-911180eade1d")
 	)
-	(label "RES_DSP"
+	(label "RESET_DSP"
 		(at 168.91 36.83 180)
 		(fields_autoplaced yes)
 		(effects
@@ -7983,7 +7972,18 @@
 		)
 		(uuid "d0042e12-845e-49db-b319-e8470b7e34ad")
 	)
-	(label "CLK__DSP"
+	(label "SCL_DSP"
+		(at 168.91 31.75 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d28e24d0-669f-4254-8b73-8c9e5744eeb1")
+	)
+	(label "SCL_DSP"
 		(at 139.7 91.44 0)
 		(fields_autoplaced yes)
 		(effects
