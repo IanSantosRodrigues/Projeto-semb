@@ -2,60 +2,59 @@
 #include "stm32f4xx_hal.h"
 #include <stdio.h>
 
-// Definindo os pinos de controle do display
 #define ST7789_RESET_PIN     GPIO_PIN_4  // PA4
 #define ST7789_DC_PIN        GPIO_PIN_5  // PA5
 #define ST7789_BL_PIN        GPIO_PIN_6  // PA6
-#define ST7789_CS_PIN        GPIO_PIN_7  // PB7
 
-extern SPI_HandleTypeDef hspi1;  // SPI1, configurado no CubeMX ou manualmente
+#define ST7789_RESET_PORT    GPIOA
+#define ST7789_DC_PORT       GPIOA
+#define ST7789_BL_PORT       GPIOA
 
-// Função de inicialização do ST7789
-void ST7789_Init(void) {
-    // Reset do display
-    HAL_GPIO_WritePin(GPIOA, ST7789_RESET_PIN, GPIO_PIN_RESET);  // Reseta o display
-    HAL_Delay(50);  // Tempo de reset
-    HAL_GPIO_WritePin(GPIOA, ST7789_RESET_PIN, GPIO_PIN_SET);    // Finaliza o reset
-    HAL_Delay(150);  // Aguarda o display iniciar após reset
-
-    // Configurações iniciais do display
-    ST7789_WriteCommand(0x01);  // Software Reset
-    HAL_Delay(150);  // Aguardar reset
-
-    ST7789_WriteCommand(0x11);  // Sleep Out
-    HAL_Delay(255);  // Aguardar wake-up do display
-
-    ST7789_WriteCommand(0x36);  // Memory Data Access Control
-    ST7789_WriteData(0x00);     // Definir a orientação para landscape (se necessário)
-
-    ST7789_WriteCommand(0x3A);  // Interface Pixel Format
-    ST7789_WriteData(0x55);     // 16 bits por pixel
-
-    // (Comandos de configuração adicionais seguem conforme necessário)
-
-    ST7789_WriteCommand(0x29);  // Display ON
-    HAL_Delay(50);  // Aguardar um pouco após ativar o display
-}
+extern SPI_HandleTypeDef hspi1;  // SPI1, configurado no CubeIDE
 
 // Função auxiliar para enviar um comando para o display
 void ST7789_WriteCommand(uint8_t cmd) {
-    HAL_GPIO_WritePin(GPIOA, ST7789_DC_PIN, GPIO_PIN_RESET);  // DC = 0 para comando
-    HAL_GPIO_WritePin(GPIOB, ST7789_CS_PIN, GPIO_PIN_RESET);  // Chip select baixo
-    HAL_SPI_Transmit(&hspi1, &cmd, 1, HAL_MAX_DELAY);         // Envia comando via SPI
-    HAL_GPIO_WritePin(GPIOB, ST7789_CS_PIN, GPIO_PIN_SET);    // Chip select alto
+    HAL_GPIO_WritePin(ST7789_DC_PORT, ST7789_DC_PIN, GPIO_PIN_RESET);  // DC = 0 (comando)
+    HAL_SPI_Transmit(&hspi1, &cmd, 1, HAL_MAX_DELAY);
 }
 
 // Função auxiliar para enviar dados para o display
 void ST7789_WriteData(uint8_t data) {
-    HAL_GPIO_WritePin(GPIOA, ST7789_DC_PIN, GPIO_PIN_SET);  // DC = 1 para dados
-    HAL_GPIO_WritePin(GPIOB, ST7789_CS_PIN, GPIO_PIN_RESET);  // Chip select baixo
-    HAL_SPI_Transmit(&hspi1, &data, 1, HAL_MAX_DELAY);         // Envia dados via SPI
-    HAL_GPIO_WritePin(GPIOB, ST7789_CS_PIN, GPIO_PIN_SET);    // Chip select alto
+    HAL_GPIO_WritePin(ST7789_DC_PORT, ST7789_DC_PIN, GPIO_PIN_SET);  // DC = 1 (dados)
+    HAL_SPI_Transmit(&hspi1, &data, 1, HAL_MAX_DELAY);
 }
 
-// Função para imprimir uma string no display (simulação)
+// Inicialização básica do display ST7789
+void ST7789_Init(void) {
+    // Reset físico
+    HAL_GPIO_WritePin(ST7789_RESET_PORT, ST7789_RESET_PIN, GPIO_PIN_RESET);
+    HAL_Delay(50);
+    HAL_GPIO_WritePin(ST7789_RESET_PORT, ST7789_RESET_PIN, GPIO_PIN_SET);
+    HAL_Delay(150);
+
+    // Sequência de inicialização
+    ST7789_WriteCommand(0x01);  // Software reset
+    HAL_Delay(150);
+
+    ST7789_WriteCommand(0x11);  // Sleep out
+    HAL_Delay(120);
+
+    ST7789_WriteCommand(0x36);  // Memory data access control
+    ST7789_WriteData(0x00);     // Default rotation (ajustável)
+
+    ST7789_WriteCommand(0x3A);  // Pixel format
+    ST7789_WriteData(0x55);     // 16 bits por pixel
+
+    ST7789_WriteCommand(0x29);  // Display ON
+    HAL_Delay(50);
+
+    // Ativa backlight (caso seja controlado via GPIO)
+    HAL_GPIO_WritePin(ST7789_BL_PORT, ST7789_BL_PIN, GPIO_PIN_SET);
+}
+
+// Função para imprimir uma string no display (simulação temporária)
 void Display_Print(const char *str) {
-    printf("%s\n", str);  // Simula a impressão no console
+    printf("%s\n", str);  // Simula no console
 }
 
 // Função para mostrar o menu no display (simulação)
@@ -67,12 +66,12 @@ void Display_ShowMenu(void) {
     printf("======================\n");
 }
 
-// Função para exibir uma mensagem no display (simulação)
+// Função para exibir mensagem simulada
 void Display_ShowMessage(const char *msg, uint8_t linha) {
     printf("Mensagem linha %d: %s\n", linha, msg);
 }
 
-// Função para exibir uma barra de progresso no display (simulação)
+// Função de barra de progresso (simulação)
 void Display_ShowProgressBar(int32_t valorAtual, int32_t valorMaximo) {
     int32_t progresso = (valorAtual * 100) / valorMaximo;
     if (progresso > 100) progresso = 100;
@@ -85,5 +84,5 @@ void Display_ShowProgressBar(int32_t valorAtual, int32_t valorMaximo) {
             printf(" ");
         }
     }
-    printf("] %ld%%\n", progresso);  // Usando %ld para int32_t
+    printf("] %ld%%\n", progresso);
 }
