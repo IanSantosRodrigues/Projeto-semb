@@ -1,5 +1,6 @@
 #include "display.h"
 #include "stm32f446xx.h"
+#include "main.h"
 #include <stdint.h>          // Inclua a biblioteca para tipos como uint8_t
 
 #define ST7789_RESET_PIN     GPIO_PIN_4  // PA4
@@ -100,10 +101,9 @@ void ST7789_DrawPixel(uint16_t x, uint16_t y, uint16_t color) {
     ST7789_WriteData(color & 0xFF);  // Envia o valor da cor (8 bits de LSB)
 }
 
-// Função para desenhar um caractere no display
 void ST7789_DrawChar(uint16_t x, uint16_t y, char c, uint16_t color, uint16_t bgcolor) {
     int i, j;
-    const uint8_t *char_data = font8x8_basic[c];  // Obtém os dados do caractere
+    const uint8_t *char_data = font8x8_basic[(uint8_t)c];  // Converte char para uint8_t
 
     // Desenha o caractere
     for (i = 0; i < 8; i++) {
