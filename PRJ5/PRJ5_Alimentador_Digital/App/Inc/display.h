@@ -1,8 +1,6 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-#include "stm32f4xx_hal.h"  // Para funções da HAL
-
 // Função de inicialização do display ST7789
 void ST7789_Init(void);
 

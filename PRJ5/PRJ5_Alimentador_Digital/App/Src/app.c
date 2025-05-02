@@ -1,7 +1,8 @@
 #include "app.h"
 #include "Display.h"
 #include "main.h"
-#include "stm32f4xx.h"
+#include <stdint.h>
+#include "stm32f446xx.h"
 
 #include <stdio.h>
 
