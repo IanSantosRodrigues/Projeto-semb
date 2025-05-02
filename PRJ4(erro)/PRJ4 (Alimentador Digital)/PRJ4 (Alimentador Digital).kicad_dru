@@ -1,0 +1,4 @@
+(version 1)
+(rule "eth clearance"
+	(constraint clearance (min 6mil))
+	(condition "A.insideCourtyard('U2')"))

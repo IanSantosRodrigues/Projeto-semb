@@ -1,0 +1,19 @@
+11:35:44 **** Incremental Build of configuration Debug for project PRJ5_Alimentador_Digital ****
+make -j8 all 
+arm-none-eabi-gcc "../App/Src/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Code/SEMB/Projeto-semb/PRJ3_Alimentador_Digital/PRJ3_Alimentador_Digital/App/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"App/Src/app.d" -MT"App/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "App/Src/app.o"
+arm-none-eabi-gcc "../App/Src/display.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Code/SEMB/Projeto-semb/PRJ3_Alimentador_Digital/PRJ3_Alimentador_Digital/App/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"App/Src/display.d" -MT"App/Src/display.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "App/Src/display.o"
+../App/Src/app.c:1:10: fatal error: app.h: No such file or directory
+    1 | #include "app.h"
+      |          ^~~~~~~
+compilation terminated.
+make: *** [App/Src/subdir.mk:22: App/Src/app.o] Error 1
+make: *** Waiting for unfinished jobs....
+../App/Src/display.c:1:10: fatal error: display.h: No such file or directory
+    1 | #include "display.h"
+      |          ^~~~~~~~~~~
+compilation terminated.
+make: *** [App/Src/subdir.mk:22: App/Src/display.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+11:35:45 Build Failed. 5 errors, 0 warnings. (took 975ms)
+
