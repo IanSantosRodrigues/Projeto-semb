@@ -1,7 +1,7 @@
 App/Src/app.o: ../App/Src/app.c \
- C:/Code/SEMB/Projeto-semb/PRJ3_Alimentador_Digital/PRJ3_Alimentador_Digital/App/Inc/app.h \
- C:/Code/SEMB/Projeto-semb/PRJ3_Alimentador_Digital/PRJ3_Alimentador_Digital/App/Inc/Display.h \
- ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
+ C:/Code/SEMB/Projeto-semb/PRJ5/PRJ5_Alimentador_Digital/App/Inc/app.h \
+ C:/Code/SEMB/Projeto-semb/PRJ5/PRJ5_Alimentador_Digital/App/Inc/Display.h \
+ ../Core/Inc/main.h ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
@@ -29,9 +29,10 @@ App/Src/app.o: ../App/Src/app.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- ../Core/Inc/main.h
-C:/Code/SEMB/Projeto-semb/PRJ3_Alimentador_Digital/PRJ3_Alimentador_Digital/App/Inc/app.h:
-C:/Code/SEMB/Projeto-semb/PRJ3_Alimentador_Digital/PRJ3_Alimentador_Digital/App/Inc/Display.h:
+ ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h
+C:/Code/SEMB/Projeto-semb/PRJ5/PRJ5_Alimentador_Digital/App/Inc/app.h:
+C:/Code/SEMB/Projeto-semb/PRJ5/PRJ5_Alimentador_Digital/App/Inc/Display.h:
+../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -60,4 +61,4 @@ C:/Code/SEMB/Projeto-semb/PRJ3_Alimentador_Digital/PRJ3_Alimentador_Digital/App/
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
-../Core/Inc/main.h:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:

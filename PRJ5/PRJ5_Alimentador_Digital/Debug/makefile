@@ -61,8 +61,8 @@ all: main-build
 main-build: PRJ5_Alimentador_Digital.elf secondary-outputs
 
 # Tool invocations
-PRJ5_Alimentador_Digital.elf PRJ5_Alimentador_Digital.map: $(OBJS) $(USER_OBJS) C:\Code\SEMB\Projeto-semb\PRJ3_Alimentador_Digital\PRJ3_Alimentador_Digital\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "PRJ5_Alimentador_Digital.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Code\SEMB\Projeto-semb\PRJ3_Alimentador_Digital\PRJ3_Alimentador_Digital\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PRJ5_Alimentador_Digital.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+PRJ5_Alimentador_Digital.elf PRJ5_Alimentador_Digital.map: $(OBJS) $(USER_OBJS) C:\Code\SEMB\Projeto-semb\PRJ5\PRJ5_Alimentador_Digital\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "PRJ5_Alimentador_Digital.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Code\SEMB\Projeto-semb\PRJ5\PRJ5_Alimentador_Digital\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PRJ5_Alimentador_Digital.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

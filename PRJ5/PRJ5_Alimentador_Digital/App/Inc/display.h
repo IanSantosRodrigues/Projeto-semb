@@ -1,6 +1,7 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
+#include <stdint.h>
 // Função de inicialização do display ST7789
 void ST7789_Init(void);
 
