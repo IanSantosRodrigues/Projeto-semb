@@ -1,4 +1,0 @@
-../App/Src/motor.c:3:6:Motor_Init	8	static
-../App/Src/motor.c:8:6:Motor_OpenLid	8	static
-../App/Src/motor.c:15:6:Motor_CloseLid	8	static
-../App/Src/motor.c:22:6:Motor_Stop	8	static

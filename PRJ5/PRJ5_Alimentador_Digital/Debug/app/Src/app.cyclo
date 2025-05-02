@@ -1,4 +1,0 @@
-../App/Src/app.c:13:16:HX711_ReadRaw	4
-../App/Src/app.c:32:13:DispensarRacaoAtePeso	4
-../App/Src/app.c:66:6:App_Init	1
-../App/Src/app.c:72:6:App_Run	1
