@@ -1,17 +1,14 @@
 #include "display.h"
-#include "stm32f446xx.h"
-#include "main.h"
-#include <stdint.h>          // Inclua a biblioteca para tipos como uint8_t
 
-#define ST7789_RESET_PIN     GPIO_PIN_4  // PA4
-#define ST7789_DC_PIN        GPIO_PIN_5  // PA5
-#define ST7789_BL_PIN        GPIO_PIN_6  // PA6
+#define ST7789_RESET_PIN     GPIO_PIN_4
+#define ST7789_DC_PIN        GPIO_PIN_5
+#define ST7789_BL_PIN        GPIO_PIN_6
 
 #define ST7789_RESET_PORT    GPIOA
 #define ST7789_DC_PORT       GPIOA
 #define ST7789_BL_PORT       GPIOA
 
-extern SPI_HandleTypeDef hspi1;  // SPI1, configurado no CubeIDE
+extern SPI_HandleTypeDef hspi1;
 
 static const uint8_t font8x8_basic[128][8] = {
     {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // 0x00
@@ -62,104 +59,94 @@ static const uint8_t font8x8_basic[128][8] = {
     {0x66, 0x66, 0x66, 0x3C, 0x18, 0x18, 0x18, 0x00}, // 'Y'
     {0x7E, 0x0C, 0x18, 0x30, 0x60, 0x60, 0x7E, 0x00}, // 'Z'
     {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // 0x7F
-    // Outros caracteres podem ser adicionados aqui, se necessário
 };
 
-// Função auxiliar para enviar um comando para o display
 void ST7789_WriteCommand(uint8_t cmd) {
-    HAL_GPIO_WritePin(ST7789_DC_PORT, ST7789_DC_PIN, GPIO_PIN_RESET);  // DC = 0 (comando)
+    HAL_GPIO_WritePin(ST7789_DC_PORT, ST7789_DC_PIN, GPIO_PIN_RESET);
     HAL_SPI_Transmit(&hspi1, &cmd, 1, HAL_MAX_DELAY);
 }
 
-// Função auxiliar para enviar dados para o display
 void ST7789_WriteData(uint8_t data) {
-    HAL_GPIO_WritePin(ST7789_DC_PORT, ST7789_DC_PIN, GPIO_PIN_SET);  // DC = 1 (dados)
+    HAL_GPIO_WritePin(ST7789_DC_PORT, ST7789_DC_PIN, GPIO_PIN_SET);
     HAL_SPI_Transmit(&hspi1, &data, 1, HAL_MAX_DELAY);
 }
 
-// Função para configurar a área de exibição no display
 void ST7789_SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1) {
-    ST7789_WriteCommand(0x2A);  // Column Address Set
+    ST7789_WriteCommand(0x2A);
     ST7789_WriteData(x0 >> 8);
     ST7789_WriteData(x0 & 0xFF);
     ST7789_WriteData(x1 >> 8);
     ST7789_WriteData(x1 & 0xFF);
 
-    ST7789_WriteCommand(0x2B);  // Row Address Set
+    ST7789_WriteCommand(0x2B);
     ST7789_WriteData(y0 >> 8);
     ST7789_WriteData(y0 & 0xFF);
     ST7789_WriteData(y1 >> 8);
     ST7789_WriteData(y1 & 0xFF);
 
-    ST7789_WriteCommand(0x2C);  // Memory Write
+    ST7789_WriteCommand(0x2C);
 }
 
-// Função para desenhar um pixel no display
 void ST7789_DrawPixel(uint16_t x, uint16_t y, uint16_t color) {
-    ST7789_SetAddressWindow(x, y, x + 1, y + 1);  // Define a posição do pixel
-    ST7789_WriteData(color >> 8);  // Envia o valor da cor (8 bits de MSB)
-    ST7789_WriteData(color & 0xFF);  // Envia o valor da cor (8 bits de LSB)
+    ST7789_SetAddressWindow(x, y, x + 1, y + 1);
+    ST7789_WriteData(color >> 8);
+    ST7789_WriteData(color & 0xFF);
 }
 
 void ST7789_DrawChar(uint16_t x, uint16_t y, char c, uint16_t color, uint16_t bgcolor) {
     int i, j;
-    const uint8_t *char_data = font8x8_basic[(uint8_t)c];  // Converte char para uint8_t
+    const uint8_t *char_data = font8x8_basic[(uint8_t)c];
 
-    // Desenha o caractere
+
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
             if (char_data[i] & (0x80 >> j)) {
-                ST7789_DrawPixel(x + j, y + i, color);  // Desenha o pixel com a cor
+                ST7789_DrawPixel(x + j, y + i, color);
             } else {
-                ST7789_DrawPixel(x + j, y + i, bgcolor);  // Desenha o fundo com a cor de fundo
+                ST7789_DrawPixel(x + j, y + i, bgcolor);
             }
         }
     }
 }
 
-// Função para desenhar uma string no display
 void ST7789_DrawString(uint16_t x, uint16_t y, const char *str, uint16_t color, uint16_t bgcolor) {
     int i = 0;
     while (str[i] != '\0') {
-        ST7789_DrawChar(x + i * 8, y, str[i], color, bgcolor);  // Desenha cada caractere
+        ST7789_DrawChar(x + i * 8, y, str[i], color, bgcolor);
         i++;
     }
 }
 
-// Função para inicializar o display ST7789
 void ST7789_Init(void) {
-    // Reset físico
+
     HAL_GPIO_WritePin(ST7789_RESET_PORT, ST7789_RESET_PIN, GPIO_PIN_RESET);
     HAL_Delay(50);
     HAL_GPIO_WritePin(ST7789_RESET_PORT, ST7789_RESET_PIN, GPIO_PIN_SET);
     HAL_Delay(150);
 
-    // Sequência de inicialização
-    ST7789_WriteCommand(0x01);  // Software reset
+    ST7789_WriteCommand(0x01);
     HAL_Delay(150);
 
-    ST7789_WriteCommand(0x11);  // Sleep out
+    ST7789_WriteCommand(0x11);
     HAL_Delay(120);
 
-    ST7789_WriteCommand(0x36);  // Memory data access control
-    ST7789_WriteData(0x00);     // Default rotation (ajustável)
+    ST7789_WriteCommand(0x36);
+    ST7789_WriteData(0x00);
 
-    ST7789_WriteCommand(0x3A);  // Pixel format
-    ST7789_WriteData(0x55);     // 16 bits por pixel
+    ST7789_WriteCommand(0x3A);
+    ST7789_WriteData(0x55);
 
-    ST7789_WriteCommand(0x29);  // Display ON
+    ST7789_WriteCommand(0x29);
     HAL_Delay(50);
 
-    // Ativa backlight (caso seja controlado via GPIO)
     HAL_GPIO_WritePin(ST7789_BL_PORT, ST7789_BL_PIN, GPIO_PIN_SET);
 }
 
-// Função para imprimir uma string no display
 void Display_Print(const char *str) {
-    ST7789_DrawString(10, 10, str, 0xFFFF, 0x0000);  // Desenha no display a string com cor branca (0xFFFF) e fundo preto (0x0000)
+    ST7789_DrawString(10, 10, str, 0xFFFF, 0x0000);
 }
 
-// Função para mostrar o menu no display
+
 void Display_ShowMenu(void) {
     ST7789_DrawString(10, 10, "=== Menu Principal ===", 0xFFFF, 0x0000);
     ST7789_DrawString(10, 30, "1. Servir racao", 0xFFFF, 0x0000);
@@ -168,25 +155,24 @@ void Display_ShowMenu(void) {
     ST7789_DrawString(10, 90, "======================", 0xFFFF, 0x0000);
 }
 
-// Função para exibir uma mensagem no display
+
 void Display_ShowMessage(const char *msg, uint8_t linha) {
     ST7789_DrawString(10, linha * 10, msg, 0xFFFF, 0x0000);
 }
 
-// Função para exibir uma barra de progresso no display
+
 void Display_ShowProgressBar(int32_t valorAtual, int32_t valorMaximo) {
     int32_t progresso = (valorAtual * 100) / valorMaximo;
     if (progresso > 100) progresso = 100;
 
-    int width = 100;  // Largura da barra de progresso
+    int width = 100;
     int filled = (progresso * width) / 100;
 
-    // Exibe a barra de progresso
     for (int i = 0; i < width; i++) {
         if (i < filled) {
-            ST7789_DrawPixel(10 + i, 120, 0x07E0);  // Cor verde
+            ST7789_DrawPixel(10 + i, 120, 0x07E0);
         } else {
-            ST7789_DrawPixel(10 + i, 120, 0x0000);  // Cor preta
+            ST7789_DrawPixel(10 + i, 120, 0x0000);
         }
     }
 }

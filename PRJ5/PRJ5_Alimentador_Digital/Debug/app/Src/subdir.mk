@@ -6,15 +6,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../App/Src/app.c \
-../App/Src/display.c 
+../App/Src/display.c \
+../App/Src/motor.c 
 
 OBJS += \
 ./App/Src/app.o \
-./App/Src/display.o 
+./App/Src/display.o \
+./App/Src/motor.o 
 
 C_DEPS += \
 ./App/Src/app.d \
-./App/Src/display.d 
+./App/Src/display.d \
+./App/Src/motor.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -24,7 +27,7 @@ App/Src/%.o App/Src/%.su App/Src/%.cyclo: ../App/Src/%.c App/Src/subdir.mk
 clean: clean-App-2f-Src
 
 clean-App-2f-Src:
-	-$(RM) ./App/Src/app.cyclo ./App/Src/app.d ./App/Src/app.o ./App/Src/app.su ./App/Src/display.cyclo ./App/Src/display.d ./App/Src/display.o ./App/Src/display.su
+	-$(RM) ./App/Src/app.cyclo ./App/Src/app.d ./App/Src/app.o ./App/Src/app.su ./App/Src/display.cyclo ./App/Src/display.d ./App/Src/display.o ./App/Src/display.su ./App/Src/motor.cyclo ./App/Src/motor.d ./App/Src/motor.o ./App/Src/motor.su
 
 .PHONY: clean-App-2f-Src
 

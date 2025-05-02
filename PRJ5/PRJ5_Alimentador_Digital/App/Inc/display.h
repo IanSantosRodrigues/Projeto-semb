@@ -2,6 +2,7 @@
 #define DISPLAY_H
 
 #include <stdint.h>
+#include "main.h"
 // Função de inicialização do display ST7789
 void ST7789_Init(void);
 
@@ -23,4 +24,4 @@ void Display_ShowMessage(const char *msg, uint8_t linha);
 // Função para exibir uma barra de progresso no display
 void Display_ShowProgressBar(int32_t valorAtual, int32_t valorMaximo);
 
-#endif // DISPLAY_H
+#endif

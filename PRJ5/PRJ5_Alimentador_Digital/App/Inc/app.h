@@ -5,6 +5,13 @@
 extern "C" {
 #endif
 
+
+#include "display.h"
+#include "motor.h"
+#include "main.h"
+#include <stdint.h>
+#include <stdio.h>
+
 void App_Init(void);
 void App_Run(void);
 
@@ -12,4 +19,4 @@ void App_Run(void);
 }
 #endif
 
-#endif /* APP_H */
+#endif
